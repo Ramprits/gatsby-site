@@ -16,11 +16,11 @@ module.exports = {
     {
       resolve: 'gatsby-source-strapi',
       options: {
-        apiURL: 'https://stanthonyhighschool.herokuapp.com',
+        apiURL: `${process.env.API_URL}`,
         contentTypes: ['user'],
         loginData: {
-          identifier: 'anita',
-          password: 'Anita@1234',
+          identifier: `${process.env.USERNAME}`,
+          password: `${process.env.PASSWORD}`,
         },
       },
     },
